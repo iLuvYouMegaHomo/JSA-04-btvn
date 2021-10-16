@@ -72,7 +72,7 @@ function sumOfMinimum(TwoDArr){
     var output = 0;
     //var minOfArr = [];
     for (x in TwoDArr){
-        var min = 10000000000000;
+        var min = Number.MAX_VALUE;
         for (y in TwoDArr[x]){
             if (min > TwoDArr[x][y]){
                 min = TwoDArr[x][y];
@@ -106,11 +106,8 @@ function freeShipping(Obj){
         //console.log(Obj[x])
     }
     //console.log(sum)
-    if (sum >= 50.00){
-        return true;
-    } else {
-        return false;
-    }
+    output = sum >= 50.00 ? true : false;
+    return output;
 }
 console.log("//BÀI 4//")
 outputWork4_1 = freeShipping(work4Object1);
@@ -120,3 +117,20 @@ outputWork4_3 = freeShipping(work4Object3);
 console.log(outputWork4_1)
 console.log(outputWork4_2)
 console.log(outputWork4_3)
+
+//////////////////////////////////////////////
+/*                  BÀI 5                   */
+//////////////////////////////////////////////
+const Work5Rate = {
+    people: 4,
+    walls: 9,
+    minutes: 63 
+}
+
+function timeToPaint(rate, people, walls){
+    var pplRate = rate.people;
+    var wallsRate = rate.walls;
+    var minuteRate = rate.minutes;
+
+    
+}
