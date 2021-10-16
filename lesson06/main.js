@@ -68,5 +68,55 @@ work3Arr = [
     [20, 21, 34, 56, 100]
 ];
 
+function sumOfMinimum(TwoDArr){
+    var output = 0;
+    //var minOfArr = [];
+    for (x in TwoDArr){
+        var min = 10000000000000;
+        for (y in TwoDArr[x]){
+            if (min > TwoDArr[x][y]){
+                min = TwoDArr[x][y];
+            }
+        }
+        output += min;
+    }
+    //minOfArr.forEach(element => {output += element})
+    //console.log(minOfArr)
+    return output;
+}
+
 console.log('//BÀI 3//')
-work3Arr.forEach(element => console.log(element))
+//work3Arr.forEach(element => console.log(element))
+outputWork3 = sumOfMinimum(work3Arr);
+console.log(outputWork3);
+
+//////////////////////////////////////////////
+/*                  BÀI 4                   */
+//////////////////////////////////////////////
+
+work4Object1 = { "Shampoo": 5.99, "Rubber Ducks": 15.99 };
+work4Object2 = { "Flatscreen TV": 399.99 };
+work4Object3 = { "Monopoly": 11.99, "Secret Hitler": 35.99, "Bananagrams": 13.99 }
+
+function freeShipping(Obj){
+    //console.log(typeof(Obj))
+    var sum = 0;
+    for (x in Obj){
+        sum += Obj[x];
+        //console.log(Obj[x])
+    }
+    //console.log(sum)
+    if (sum >= 50.00){
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log("//BÀI 4//")
+outputWork4_1 = freeShipping(work4Object1);
+outputWork4_2 = freeShipping(work4Object2);
+outputWork4_3 = freeShipping(work4Object3);
+
+console.log(outputWork4_1)
+console.log(outputWork4_2)
+console.log(outputWork4_3)
